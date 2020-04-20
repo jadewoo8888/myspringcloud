@@ -35,3 +35,12 @@ management:
     web:
       exposure:
         include: 'refresh'
+
+
+ #bootstrap 加载优先于 applicaton。bootstrap 主要用于从额外的资源来加载配置信息，还可以在本地外部配置文件中解密属性。
+#这两个上下文共用一个环境，它是任何Spring应用程序的外部属性的来源。bootstrap 里面的属性会优先加载，它们默认也不能被本地相同配置覆盖。
+#bootstrap 配置文件有以下几个应用场景。
+  #
+  #使用 Spring Cloud Config 配置中心时，这时需要在 bootstrap 配置文件中添加连接到配置中心的配置属性来加载外部配置中心的配置信息；
+  #一些固定的不能被覆盖的属性
+  #一些加密/解密的场景；
