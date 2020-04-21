@@ -22,4 +22,9 @@ public class UserController {
         String str = orderFeign.order();
         return str;
     }
+
+    @RequestMapping("/getUser")
+    public String getUser(){
+        return "feign user server";
+    }
 }
