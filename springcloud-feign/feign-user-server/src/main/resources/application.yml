@@ -9,3 +9,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+#feign:
+#  httpclient:
+#    enabled: true  #Feign解决Get请求自动转化成POST的问题 但是会存在参数传递不过去的问题

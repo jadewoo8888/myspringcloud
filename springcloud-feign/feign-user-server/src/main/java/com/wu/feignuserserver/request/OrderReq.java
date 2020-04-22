@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
  **/
 public class OrderReq {
 
-    @NotNull(message = "订单编码不能为空")
+    //@NotNull(message = "订单编码不能为空")
     private Integer code;
     //@NotBlank(message = "商品名字不能为空")
     private String productName;

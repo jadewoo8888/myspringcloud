@@ -5,6 +5,7 @@ import com.wu.feignuserserver.server.OrderFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
@@ -32,10 +33,10 @@ public class UserController {
         return "feign user server";
     }
     //因feign问题，无法访问
-    /*@GetMapping("queryOrderInfoA")
+    @GetMapping("queryOrderInfoA")
     String queryOrderInfoA(@Valid OrderReq req) {
         return orderFeign.queryOrderInfoA(req);
-    }*/
+    }
 
     //http://127.0.0.1:8763/queryOrderInfo?code=1&productName=swisse
     @GetMapping("queryOrderInfoB")
